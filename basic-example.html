@@ -1,0 +1,16 @@
+<!Doctype html>
+<html>
+<script src="perceptron.js"></script>
+<script>
+  //data
+  const x = [[0, 0, 0], [0, 0, 1], [0, 1, 1], [1, 1, 0], [1, 0, 1]] // inputs
+  const y = [0, 0, 0, 1, 1]  // desired outputs
+  const z = [1,1,1] // data to predict answer
+
+    let engine = new ML(x,y,1000,.3)
+    engine.fit()
+    let res =  engine.predict(z)
+    console.log(`Result for ${z} > ${res}`)
+</script>
+
+</html>
